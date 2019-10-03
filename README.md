@@ -450,7 +450,7 @@ app.stage.addChild(cat);
 ```
 Remember that the `stage` is the main container that holds all of your sprites.
 
-**Important: you won't be able to see any of your sprites sprites unless you add them to the `stage`!**
+**Important: you won't be able to see any of your sprites unless you add them to the `stage`!**
 
 Before we continue, let's look at a practical example of how to use what
 you've just learnt to display a single image. In the `examples/images`
@@ -955,8 +955,8 @@ This next diagram shows what happens to the rotated sprite if you center its anc
 You can see that the sprite’s texture shifts up and to the left. This
 is an important side-effect to remember!
 
-Just like with `position` and `scale`, you can set the anchor’s x and
-y values with one line of code like this:
+Just like with `position` and `scale`, you can set the anchor’s `x` and
+`y` values with one line of code like this:
 ```js
 cat.anchor.set(x, y)
 ```
@@ -975,7 +975,7 @@ point, you've also changed its x/y origin point.
 
 So, what's the difference between `anchor` and `pivot`? They're really
 similar! `anchor` shifts the origin point of the sprite's image texture, using a 0 to 1 normalized value.
-`pivot` shifts the origin of the sprite's x and y point, using pixel
+`pivot` shifts the origin of the sprite's `x` and `y` point, using pixel
 values. Which should you use? It's up to you. Just play around
 with both of them and see which you prefer.
 
@@ -1165,7 +1165,7 @@ edge of an adjacent image on the tileset appears next to a sprite.
 This happens because of the way your computer's GPU (Graphics
 Processing Unit) decides how to round fractional pixels values. Should
 it round them up or down? This will be different for each GPU.
-Leaving 1 or 2 pixels spacing around images on a tilseset makes all
+Leaving 1 or 2 pixels spacing around images on a tileset makes all
 images display consistently.
 
 (Note: If you have two pixels of padding around a graphic, and you still notice a strange "off by one pixel" glitch in the
@@ -1477,7 +1477,7 @@ the right side of the stage.
 
 ![Moving sprites](/examples/images/screenshots/15.png)
 
-That's because each time the `gameLoop` runs, it adds 1 to the cat's x position.
+That's because each time the `gameLoop` runs, it adds 1 to the cat's `x` position.
 ```
 cat.x += 1;
 ```
@@ -2213,7 +2213,7 @@ rectangle.y = 170;
 app.stage.addChild(rectangle);
 
 ```
-This code makes a 64 by 64 blue rectangle with a red border at an x and y position of 170.
+This code makes a 64 by 64 blue rectangle with a red border at an `x` and `y` position of 170.
 
 <a id='circles'></a>
 ### Circles
@@ -2223,7 +2223,7 @@ Make a circle with the `drawCircle` method. Its three arguments are
 ```js
 drawCircle(x, y, radius)
 ```
-Unlike rectangles and sprites, a circle’s x and y position is also its
+Unlike rectangles and sprites, a circle’s `x` and `y` position is also its
 center point. Here’s how to make a violet colored circle with a radius of 32 pixels.
 ```js
 let circle = new Graphics();
