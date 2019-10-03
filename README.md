@@ -1484,11 +1484,11 @@ cat.x += 1;
 
 Any function you add to Pixi's `ticker` will be called 60 times per second. You can see that the function is provided a `delta` argument - what's that?
 
-The `delta` value represents the amount of fractional lag between frames. You can optionally add it to the cat's position, to make the cat's animation independent of the frame rate. Here's how:
+The `delta` value represents the amount of fractional lag between frames. You can optionally multiply it by the cat's position, to make the cat's animation independent of the frame rate. Here's how:
 ```js
-cat.x += 1 + delta;
+cat.x += 1 * delta;
 ```
-Whether or not you choose to add this `delta` value is largely an aestheic choice. And the effect will only really be noticeable if your animation is struggling to keep up with a consistent 60 frames per second display rate (which might happen, for example, if it's running on a slow device). The rest of the examples in this tutorial won't use this `delta` value, but feel free to use it in your own work if you wish.
+Whether or not you choose to include this `delta` value is largely an aestheic choice. And the effect will only really be noticeable if your animation is struggling to keep up with a consistent 60 frames per second display rate (which might happen, for example, if it's running on a slow device). The rest of the examples in this tutorial won't use this `delta` value, but feel free to use it in your own work if you wish.
 
 You don't have to use Pixi's ticker to create a game loop. If you prefer, just use `requestAnimationFrame`, like this:
 

@@ -54,12 +54,12 @@ function gameLoop(delta){
   cat.x += 1;
 
   //The `delta` value represents the amount of fractional lag between frames.
-  //You can optionally add it to the cat's position, to make the cat's animation
-  //independent of the frame rate. Whether or not you choose to add it is largely an 
+  //You can optionally multiply it by the cat's position, to make the cat's animation
+  //independent of the frame rate. Whether or not you choose to include it is largely an 
   //aestheic choice, and the difference in the effect will only really be noticable
   //if your animation is struggling to keep up with a consistent 60 frames per second
   //display rate.
-  //cat.x += 1 + delta;
+  //cat.x += 1 * delta;
 }
 </script>
 </body>
